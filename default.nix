@@ -84,11 +84,11 @@ filegroup(
     allow_empty = True,
 )
 
-# ARM64-specific system libraries
+# ARM64-specific system shared libraries
 cc_library(
     name = "system_libs",
     srcs = glob(["lib/*.so*"]),
-    linkstatic = 1,
+    linkstatic = 0,
     visibility = ["//visibility:public"],
 )
 '';
